@@ -79,23 +79,23 @@
                     <img src="${resource(dir: 'images', file: 'logo_gadpp_reportes.png')}"/>
                     EFICIENCIA Y SOLIDARIDAD
                 </div>
-                <h1>S.A.D. Web</h1>
+                <h1>Portal Público</h1>
 
-                <h3>
+                <h4>
                     <p class="text-info">GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIA DE PICHINCHA</p>
 
                     <p class="text-info">Sistema de Administración de Documentos</p>
-                </h3>
+                </h4>
             </div>
             <elm:flashMessage tipo="${flash.tipo}" icon="${flash.icon}"
                               clase="${flash.clase}">${flash.message}</elm:flashMessage>
 
-            <div class="dialog ui-corner-all" style="height: 295px;padding: 10px;width: 910px;margin: auto;margin-top: 5px">
+            <div class="dialog ui-corner-all" style="height: 205px;padding: 10px;width: 910px;margin: auto;margin-top: -5px;">
                 %{--<div style="text-align: center; margin-top: 10px; color: #810;">--}%
                 %{--<img src="${resource(dir: 'images', file: 'logoSAD.png')}"/>--}%
                 %{--</div>--}%
 
-                <div class="buscar" style="margin-bottom: 20px">
+                <div class="buscar" style="margin-bottom: 20px; margin-top: 10px">
 
                     <fieldset>
                         <legend class="text-info">Consulta de Trámites</legend>
@@ -132,27 +132,34 @@
                         %{--</div>--}%
 
 
-                        <div class="row">
-                            <div class="col-md-3" style="text-align: left">
-                                <label for="codigo">Código del trámite</label>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-md-2" style="text-align: left">
+                            </div>
+                            <div class="col-md-4" style="text-align: left">
+                                <label for="codigo">Ingrese el número de trámite</label>
                             </div>
 
                             <div class="col-md-2" style="margin-left: -20px;">
                                 <g:textField name="codigo" value="" maxlength="20" class="form-control allCaps" style="width: 160px"/>
                             </div>
-                        </div>
-                        <div class="col-md-7" style="text-align: left; margin-left: 30px; margin-top: 15px; width: 580px;">
-                            Ingrese el código del trámie en el formato: DEX - # - OFI - AÑO. <br/> Donde: <strong>DEX</strong>: es el prefijo para todos los trámites,
-                            <strong>#</strong>: representa el número del trámite, <strong>OFI</strong> son las siglas de la oficina y
-                            <strong>AÑO</strong> es los dos dígitos del año. <span style="color: #448"> Ejemplo: DEX-43-DPT-14</span>
-                        </div>
-                    </div>
-
-                        <div class="col-md-10">
-                            <a href="#" name="busqueda" class="btn btn-success btnBusqueda" style="margin-top: -15px">
+                        <div class="col-md-2">
+                            <a href="#" name="busqueda" class="btn btn-info btnBusqueda">
                                 <i class="fa fa-check"></i> Buscar
                             </a>
                         </div>
+                        </div>
+                        %{--<div class="col-md-7" style="text-align: left; margin-left: 30px; margin-top: 15px; width: 580px;">--}%
+                            %{--Ingrese el código del trámie en el formato: DEX - # - OFI - AÑO. <br/> Donde: <strong>DEX</strong>: es el prefijo para todos los trámites,--}%
+                            %{--<strong>#</strong>: representa el número del trámite, <strong>OFI</strong> son las siglas de la oficina y--}%
+                            %{--<strong>AÑO</strong> es los dos dígitos del año. <span style="color: #448"> Ejemplo: DEX-43-DPT-14</span>--}%
+                        %{--</div>--}%
+                    </div>
+
+                        %{--<div class="col-md-10">--}%
+                            %{--<a href="#" name="busqueda" class="btn btn-success btnBusqueda" style="margin-top: -15px">--}%
+                                %{--<i class="fa fa-check"></i> Buscar--}%
+                            %{--</a>--}%
+                        %{--</div>--}%
 
                         <div class="col-md-10" style="text-align: left; margin-left: 20px; margin-top: 5px;">
                             <p class="text-info"> Si desconoce el número o código del trámite, por favor comuníquese  al teléfono: ${parametros?.prmttelf}</p>
@@ -163,7 +170,7 @@
                 </div>
 
 
-                <div id="tabla">
+                <div id="tabla" style=" background-color: #f1ffff">
 
                 </div>
 
