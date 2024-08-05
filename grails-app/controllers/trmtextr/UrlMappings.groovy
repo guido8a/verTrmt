@@ -3,14 +3,15 @@ package trmtextr
 class UrlMappings {
 
     static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
+        "/$controller/$action?/$id?" {
             constraints {
                 // apply constraints here
             }
         }
 
-        "/"(view:"/index")
-        "500"(view:'/error')
-        "404"(view:'/notFound')
+        "/"(controller: "busquedaExternos", action: "buscarExternos")
+        "500"(view: '/error')
+        "403"(controller: "shield",action: "error403")
+        "404"(controller: "shield",action: "error404")
     }
 }
